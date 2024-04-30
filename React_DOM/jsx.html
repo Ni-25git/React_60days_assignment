@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JSX and Babel</title>
+  </head>
+  <body>
+      <!-- it is a div in which we can render the reactElement -->
+    <div id="root"></div>
+    <!-- these given cdn links in below ,it is a wriiten documentation code for react startup -->
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+     <!-- given below the cdn link of babel, which is used for allowing the html like codes in the js -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      let root = document.getElementById("root")
+      let showFirstParagraph = true;
+      let para = "Seize the Day"
+      let paragraph = (
+
+        <>
+        {/* below we can use conditional rendering which is work as terniary operator */}
+        {showFirstParagraph ? <p> {para}</p> : <p>null</p>}
+        </>
+      );
+         {/* rendering the parargraph into the div with id root */}
+      ReactDOM.render(paragraph,root)
+    </script>
+  </body>
+</html>

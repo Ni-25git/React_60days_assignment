@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Template</title>
+  </head>
+  <body>
+    <!-- it is a div in which we can render the reactElement -->
+    <div id="root"></div>      
+  </body>
+  <!-- these given cdn links in below ,it is a wriiten documentation code for react startup -->
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <!-- given below the cdn link of babel, which is used for allowing the html like codes in the js -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    let root = document.getElementById("root")
+    let header = React.createElement("p",null,"Seize the Day")
+    ReactDOM.render(header,root)
+  </script>
+  <!-- reflections or observations -->
+  <!-- we can see that diff between the ReactDom and traditional DOM is that reactDom is update fastly in the UI than the traditional DOM -->
+  <!-- ReactDOM is performancewise is faster than the traditional DOM -->
+  <!-- ReactDOM is more readable than the traditional DOM -->
+
+</html>

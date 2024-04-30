@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JSX and Babel</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+         {/* function in which clicked on button to show alert hello */}
+        function btn(){
+            alert("Hello");
+        };
+        {/* it is variable named div in which we can used the jsx element by the help of babel transform  */}
+      let div = (
+        <>
+        <p>React is javascript library</p>
+        {/* a div which classname is main  */}
+        <div className="main" >
+            <p>Click the below button to alert 'Hello</p>
+            <button onClick={btn}>Alert Hello</button>
+
+        </div>
+        </>
+      );
+      {/* rendering the elements in the root  */}
+      ReactDOM.render(div,root)
+    </script>
+  </body>
+</html>
