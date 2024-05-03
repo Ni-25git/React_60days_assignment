@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic List Rendering</title>
+    <style>
+      .gallery {
+        height: 70vh;
+        width: 70%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+      img {
+        height: 300px;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      let root = document.getElementById("root");
+
+      // make a gallery component with passing chhildren
+      let Gallery = ({ children }) => {
+        return <div className="gallery">{children}</div>;
+      };
+
+
+      // make a app function in which Gallery componnet can pass
+      // img as a children in gallery component
+      let App = () => (
+        <>
+          <Gallery>
+            <img
+              src="https://tse3.mm.bing.net/th?id=OIP.com9clRyzT8A2WFX5Y8zqwHaHa&pid=Api&P=0&h=180"
+              alt="Image 1"
+            />
+            <img
+              src="https://tse4.mm.bing.net/th?id=OIP.XvWqW8O7NNJ56WxmKAZKYQHaHa&pid=Api&P=0&h=180"
+              alt="Image 2"
+            />
+            <img
+              src="https://tse1.mm.bing.net/th?id=OIP.sxzBAOrdYJ46xhVzBOBhZAHaHa&pid=Api&P=0&h=180"
+              alt="Image 3"
+            />
+            <img
+              src="https://tse1.mm.bing.net/th?id=OIP.79qOhxKsyXySNSHQuQ8sqQHaFA&pid=Api&P=0&h=180"
+              alt="Image 4"
+            />
+            <img
+              src="https://tse3.mm.bing.net/th?id=OIP.com9clRyzT8A2WFX5Y8zqwHaHa&pid=Api&P=0&h=180"
+              alt="Image 5"
+            />
+            <img
+              src="https://tse3.mm.bing.net/th?id=OIP.com9clRyzT8A2WFX5Y8zqwHaHa&pid=Api&P=0&h=180"
+              alt="Image 6"
+            />
+            <img
+              src="https://tse3.mm.bing.net/th?id=OIP.com9clRyzT8A2WFX5Y8zqwHaHa&pid=Api&P=0&h=180"
+              alt="Image 7"
+            />
+            <img
+              src="https://tse3.mm.bing.net/th?id=OIP.com9clRyzT8A2WFX5Y8zqwHaHa&pid=Api&P=0&h=180"
+              alt="Image 8"
+            />
+          </Gallery>
+        </>
+      );
+
+      ReactDOM.render(<App />, root);
+    </script>
+  </body>
+</html>

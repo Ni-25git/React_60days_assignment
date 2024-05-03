@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greeting Component</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // Your Greeting component code will go here
+    let root = document.getElementById("root")
+
+    {/* Make a greeting component which return messagge and name*/}
+    let Greeting=(props)=>{
+        return <p>{`${props.message},${props.name}`}</p>
+      
+    }
+     {/* Make a div named jsx in which we can call a Greeting Component*/}
+    let div=(
+        <div>
+            <Greeting message="Hello" name="Alice"/>
+            <Greeting message="Hello" name="Nipun"/>
+            <Greeting message="Hello" name="shauray"/>
+        </div>
+    )
+
+
+    
+{/* Render the div named jsx in the root*/}
+    ReactDOM.render(div, root)
+  </script>
+</html>
