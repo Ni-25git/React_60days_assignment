@@ -14,24 +14,48 @@
   <script type="text/babel">
     // Your Greeting component code will go here
     let root = document.getElementById("root")
+    let User =()=>{
+  const users = [
+  {
+    id: 1,
+    name: "John",
+    age: 23,
+    gender: "male",
+    email: "atuny0@sohu.com",
+    image: "https://placehold.co/400"
+  },
+  {
+    id: 2,
+    name: "Terry",
+    age: 50,
+    gender: "male",
+    email: "terry@sohu.com",
+    image: "https://placehold.co/400"
+  },
+  {
+    id: 3,
+    name: "Jane",
+    age: 25,
+    gender: "female",
+    email: "jane@sohu.com",
+     image: "https://placehold.co/400"
+  },
+];
+return(
+  <ul>
+    <li>{users.map(())}</li>
+  </ul>
+)
+    };
 
-    {/* Make a greeting component which return messagge and name*/}
-    let Greeting=(props)=>{
-        return <p>{`${props.message},${props.name}`}</p>
-      
-    }
-     {/* Make a div named jsx in which we can call a Greeting Component*/}
-    let div=(
-        <div>
-            <Greeting message="Hello" name="Alice"/>
-            <Greeting message="Hello" name="Nipun"/>
-            <Greeting message="Hello" name="shauray"/>
-        </div>
-    )
+function App(){
+
+}
+
 
 
     
 {/* Render the div named jsx in the root*/}
-    ReactDOM.render(div, root)
+    ReactDOM.render(<App />, root)
   </script>
 </html>
