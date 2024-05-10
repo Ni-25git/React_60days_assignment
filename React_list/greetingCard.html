@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greeting Card template</title>
+    <style>
+        .container{
+            height: 500px;
+            width: 60%;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+            justify-content: space-between;
+            background-color: azure;
+
+        }
+      
+        .card{
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+            text-align: center;
+            background-color: blanchedalmond;
+           
+        }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // Your  code will go here
+
+    let div = document.getElementById("root")
+
+    let GreetingCard=({greeting , name})=>{
+        return(
+            <div className="card">
+                <h2>{greeting}</h2>
+                <p>{name}</p>
+            </div>
+        )
+    };
+
+    let App=()=>{
+        const greetingCards=[
+        {greeting: "Happy Birthday" , name:"John Doe"},
+        {greeting: "Happy Birthday" , name:"Shaurya"},
+        {greeting: "Happy Birthday" , name:"Harsh"},
+        {greeting: "Happy Birthday" , name:"Nipun"},
+        {greeting: "Happy Birthday" , name:"Bhavya"},
+        {greeting: "Happy Birthday" , name:"Dev"}
+        ]
+        return (
+            <div className="container">
+                {greetingCards.map((card,index)=>(
+                    <GreetingCard key={index} greeting={card.greeting} name={card.name} />
+
+        ))}
+            </div>
+        )
+    };
+
+    ReactDOM.render(<App />,root)
+    ReactDOM.render(<App />, document.querySelector('.container'))
+
+  </script>
+</html>
