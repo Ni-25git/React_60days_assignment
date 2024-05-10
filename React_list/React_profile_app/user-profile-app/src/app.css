@@ -1,0 +1,29 @@
+.container{
+    height: 700px;
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    background-color: aliceblue;
+    margin: 20px auto;
+    
+
+}
+.userProfile{
+    height: 300px;
+    width: 200px;
+    text-align: center;
+    margin: 10px 30px;
+    background-color: brown;
+}
+.userProfile img{
+    margin-top: 10px;
+}
+.header{
+    text-align: center;
+}
+.header input{
+    height: 50px;
+    width: 25%;
+    border-radius: 20px;
+}
