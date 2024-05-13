@@ -1,0 +1,52 @@
+.parent{
+    width: 60%;
+    height: auto;
+    display: grid;
+    margin: 30px auto;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: space-between;
+    gap: 20px;
+    background-color: aqua;
+}
+.data{
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: brown;
+    margin: 20px 40px;
+
+}
+.post{
+    text-align: center;
+}
+.navbar{
+    height: 60px;
+    width: auto;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.btn{
+    height: 40px;
+    width: 15%;
+    margin-top: 8px;
+    border-radius: 15px;
+    background-color: aqua;
+}
+.form{
+    height: 200px;
+    width: 30%;
+    border: 1px solid black;
+    margin: 20px auto;
+    background-color: antiquewhite;
+}
+.form input{
+    margin: 10px 10px ;
+}
+.form button{
+    height: 30px;
+    width: 15%;
+    background-color: brown;
+}

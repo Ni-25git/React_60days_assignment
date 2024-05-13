@@ -1,0 +1,40 @@
+{
+  "todos": [
+    {
+      "title": "python",
+      "assignee": "python list",
+      "isCompleted": true,
+      "id": 2
+    },
+    {
+      "title": "Java",
+      "assignee": "Harsh Tyagi",
+      "isCompleted": true,
+      "id": 3
+    },
+    {
+      "title": "html",
+      "assignee": "html tags",
+      "isCompleted": false,
+      "id": 4
+    },
+    {
+      "title": "css",
+      "assignee": "css media query",
+      "isCompleted": true,
+      "id": 5
+    },
+    {
+      "title": "chatApp",
+      "assignee": "shaurya",
+      "isCompleted": true,
+      "id": 6
+    },
+    {
+      "title": "todo crud",
+      "assignee": "Nipun",
+      "isCompleted": false,
+      "id": 7
+    }
+  ]
+}
